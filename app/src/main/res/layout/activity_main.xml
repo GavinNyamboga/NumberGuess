@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="30dp"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title.numberguess"
+        android:textSize="30sp"/>
+    <Button
+        android:id="@+id/startBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btn.start"
+        android:onClick="start"
+        />
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="5dp"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label.guess"/>
+        <EditText
+            android:id="@+id/num"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/edit.number"
+            android:inputType="number"
+            tools:ignore="Autofill"
+            />
+        <Button
+            android:id="@+id/doGuess"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn.do.guess"
+            android:onClick="guess"/>
+
+    </LinearLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="5dp"/>
+
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/status.start.info"
+        android:textSize="20sp"
+        android:textColor="#FF000000"/>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="5dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label.log"
+        android:textStyle="bold"/>
+
+    <com.dev.numberguess.gui.Console
+        android:id="@+id/console"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+
+        />
+
+</LinearLayout>
